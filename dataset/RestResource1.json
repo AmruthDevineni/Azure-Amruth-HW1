@@ -1,0 +1,29 @@
+{
+	"name": "RestResource1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PollutionRESTService",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"apiKey": {
+				"type": "string"
+			},
+			"startDateParam": {
+				"type": "string"
+			},
+			"endDateParam": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "data/2.5/air_pollution/history?lat=42.3601&lon=-71.0589&start=@{dataset().startDateParam}&end=@{dataset().endDateParam}&appid=@{dataset().apiKey}",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}
