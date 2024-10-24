@@ -23,27 +23,6 @@
 				}
 			},
 			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "RetrieveAPIKey",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "apiKey",
-					"value": "@activity('RetrieveAPIKey').output.value\n"
-				}
-			},
-			{
 				"name": "ForEach1",
 				"type": "ForEach",
 				"dependsOn": [
@@ -123,12 +102,30 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "RetrieveAPIKey",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "apiKey",
+					"value": "@activity('RetrieveAPIKey').output.value\n"
+				}
 			}
 		],
 		"variables": {
-			"ApiKey": {
-				"type": "String"
-			},
 			"apiKey": {
 				"type": "String"
 			}
