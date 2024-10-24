@@ -1,0 +1,10 @@
+{
+	"name": "Amruth_KeyVaultLinkedService",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://AmruthKeyVault2.vault.azure.net/"
+		}
+	}
+}
