@@ -231,7 +231,7 @@
 							"method": "GET",
 							"headers": {},
 							"url": {
-								"value": "https://AmruthKeyVault2/secrets/OpenWeatherAPIKey?api-version=7.0\n",
+								"value": "https://amruthkeyvault2.vault.azure.net/secrets/OpenWeatherAPIKey?api-version=7.0\n",
 								"type": "Expression"
 							},
 							"authentication": {
