@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"method": "GET",
 					"url": {
-						"value": "https://AmruthKeyVault2/secrets/OpenWeatherAPIKey?\napi-version=7.0\n",
+						"value": "https://AmruthKeyVault2/secrets/OpenWeatherAPIKey?api-version=7.0\n",
 						"type": "Expression"
 					}
 				}
@@ -121,7 +121,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "apiKey",
-					"value": "@activity('RetrieveAPIKey').output.value\n"
+					"value": {
+						"value": "@activity('RetrieveAPIKey').output.value\n",
+						"type": "Expression"
+					}
 				}
 			}
 		],
