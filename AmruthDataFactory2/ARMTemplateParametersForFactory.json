@@ -8,17 +8,17 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"Amruth_KeyVaultLinkedService_properties_typeProperties_baseUrl": {
+			"value": "https://AmruthKeyVault2.vault.azure.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storage2amruth.dfs.core.windows.net/"
+		},
 		"PollutionRESTService_properties_typeProperties_url": {
 			"value": "http://api.openweathermap.org/"
 		},
 		"WeatherRESTService_properties_typeProperties_url": {
 			"value": "https://history.openweathermap.org/"
-		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"value": "https://storage2amruth.dfs.core.windows.net/"
-		},
-		"Amruth_KeyVaultLinkedService_properties_typeProperties_baseUrl": {
-			"value": "https://AmruthKeyVault2.vault.azure.net/"
 		}
 	}
 }
