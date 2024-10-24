@@ -56,6 +56,10 @@
 							"url": {
 								"value": "https://AmruthKeyVault2/secrets/OpenWeatherAPIKey?api-version=7.0\n",
 								"type": "Expression"
+							},
+							"authentication": {
+								"type": "MSI",
+								"resource": "https://vault.azure.net"
 							}
 						}
 					},
