@@ -1,0 +1,19 @@
+{
+	"name": "Json_Pollution",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Bronze/Pollution",
+				"fileSystem": "storage"
+			}
+		},
+		"schema": {}
+	}
+}
