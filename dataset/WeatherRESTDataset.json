@@ -1,0 +1,29 @@
+{
+	"name": "WeatherRESTDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "WeatherRESTService",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"apiKeyParam": {
+				"type": "string"
+			},
+			"startDateParam": {
+				"type": "string"
+			},
+			"endDateParam": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "data/2.5/history/city?lat=42.3601&lon=-71.0589&type=hour&start=@{dataset().startDateParam}&end=@{dataset().endDateParam}&appid=@{dataset().apiKeyParam}",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}
