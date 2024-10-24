@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"method": "GET",
 					"url": {
-						"value": "https://AmruthKeyVault2.vault.azure.net/secrets/OpenWeatherAPIKey?api-version=7.0",
+						"value": "https://amruthkeyvault2.vault.azure.net/secrets/OpenWeatherAPIKey/355801f3d37e48ba80d3fc48f109465f",
 						"type": "Expression"
 					}
 				}
