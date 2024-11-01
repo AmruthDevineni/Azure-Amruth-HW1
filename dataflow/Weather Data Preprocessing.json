@@ -51,7 +51,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     documentForm: 'documentPerLine',",
-				"     wildcardPaths:[(*.json)]) ~> WeatherDataSource",
+				"     wildcardPaths:[(\"*.json\")]) ~> WeatherDataSource",
 				"WeatherDataSource foldDown(unroll(list),",
 				"     mapColumn(",
 				"          message,",
