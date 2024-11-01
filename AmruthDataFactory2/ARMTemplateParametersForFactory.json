@@ -8,6 +8,9 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"Silver_accountKey": {
+			"value": ""
+		},
 		"Amruth_KeyVaultLinkedService_properties_typeProperties_baseUrl": {
 			"value": "https://AmruthKeyVault2.vault.azure.net/"
 		},
@@ -19,6 +22,9 @@
 		},
 		"WeatherRESTService_properties_typeProperties_url": {
 			"value": "https://history.openweathermap.org/"
+		},
+		"Silver_properties_typeProperties_url": {
+			"value": "https://storage2amruth.dfs.core.windows.net/"
 		}
 	}
 }
