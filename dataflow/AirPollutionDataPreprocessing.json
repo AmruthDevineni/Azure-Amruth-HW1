@@ -1,0 +1,40 @@
+{
+	"name": "AirPollutionDataPreprocessing",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Json_Pollution",
+						"type": "DatasetReference"
+					},
+					"name": "PollutionDataSource"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "flatten1"
+				},
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          coord as (lon as double, lat as double),",
+				"          list as string[]",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> PollutionDataSource",
+				"PollutionDataSource foldDown(unroll(),",
+				"     skipDuplicateMapInputs: false,",
+				"     skipDuplicateMapOutputs: false) ~> flatten1",
+				"flatten1 derive(corrected_timestamp = iif(length(toString(timestamp)) == 10,toInteger(timestamp), toInteger(null()))) ~> derivedColumn1"
+			]
+		}
+	}
+}
