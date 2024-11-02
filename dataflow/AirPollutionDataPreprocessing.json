@@ -3,26 +3,11 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [
-				{
-					"dataset": {
-						"referenceName": "Json_Pollution",
-						"type": "DatasetReference"
-					},
-					"name": "PollutionDataSource"
-				}
-			],
+			"sources": [],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(output(",
-				"          coord as (lon as double, lat as double),",
-				"          list as string[]",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine') ~> PollutionDataSource"
+				""
 			]
 		}
 	}
