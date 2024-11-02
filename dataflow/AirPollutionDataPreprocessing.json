@@ -13,14 +13,7 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "flatten1"
-				},
-				{
-					"name": "derivedColumn1"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"source(output(",
 				"          coord as (lon as double, lat as double),",
@@ -29,11 +22,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine') ~> PollutionDataSource",
-				"PollutionDataSource foldDown(unroll(),",
-				"     skipDuplicateMapInputs: false,",
-				"     skipDuplicateMapOutputs: false) ~> flatten1",
-				"flatten1 derive(corrected_timestamp = iif(length(toString(timestamp)) == 10,toInteger(timestamp), toInteger(null()))) ~> derivedColumn1"
+				"     documentForm: 'documentPerLine') ~> PollutionDataSource"
 			]
 		}
 	}
