@@ -100,10 +100,13 @@
 								"type": "Expression"
 							},
 							"startDateParam": {
-								"value": "@div(ticks(addDays(utcNow(), -366)),10000000)",
+								"value": "@div(sub(ticks(addDays(utcNow(), -366)), ticks('1970-01-01T00:00:00Z')), 10000000)",
 								"type": "Expression"
 							},
-							"endDateParam": "@div(ticks(addDays(utcNow(), -1)),10000000)"
+							"endDateParam": {
+								"value": "@div(sub(ticks(addDays(utcNow(), -1)), ticks('1970-01-01T00:00:00Z')), 10000000)",
+								"type": "Expression"
+							}
 						}
 					}
 				],
